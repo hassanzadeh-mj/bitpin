@@ -1,12 +1,9 @@
 import type {FC} from "react";
 import {useNavigate} from "react-router-dom";
 import {Avatar, Button, Col, Flex, Layout, List, Menu, message, Row, Tabs, TabsProps, Typography} from "antd";
-import CustomTable from "../../customTable";
 import React, {useEffect, useState} from "react";
-import {MarketsGet} from "../../../services/api/markets";
 import {OrderGet, SellGet, TradesGet} from "../../../services/api/actives";
-import {ISearchResponseContent} from "@/types/base";
-import {IMarketsTypeResponse} from "../../../services/api/markets/markets.type";
+import {useAppSelector} from "../../../redux/hook/useTypedSelector";
 
 const Task2: FC = () => {
     const navigate = useNavigate();
@@ -16,6 +13,9 @@ const Task2: FC = () => {
     const [data, setData] = useState<any>();
     const [dataSell, setDataSell] = useState<any>();
     const [dataTrades, setDataTrades] = useState<any>();
+    const dataItem = useAppSelector(state=> state.item)
+
+    console.log(dataItem)
 
     useEffect(() => {
         OrderGet().then(async data => {

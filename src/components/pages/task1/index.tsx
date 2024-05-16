@@ -8,9 +8,12 @@ import {IMarketsTypeRequest, IMarketsTypeResponse} from "../../../services/api/m
 import CustomTable from "../../customTable";
 import {ColumnType} from "antd/lib/table";
 import {logDOM} from "@testing-library/react";
+import {useAppDispatch} from "../../../redux/hook/useTypedSelector";
+import {setItemAction} from "../../../redux/Item/itemSlice";
 
 const Task1: FC = () => {
     const navigate = useNavigate();
+    const dispatch = useAppDispatch();
     const [messageApi, contextHolder] = message.useMessage();
     const [request, setRequest] = useState<IMarketsTypeRequest>({});
     const [loading, setLoading] = useState(true);
@@ -164,6 +167,7 @@ const Task1: FC = () => {
                                          onChange: (e: any) => {
                                              debugger
                                              navigate(`/task/${e}`)
+                                             dispatch(setItemAction(dataIRT.results.filter(item => item.id == e)))
                                          }
                                      }}
                                      columns={columnsUSDT}

@@ -17,7 +17,7 @@ p, h3 {
 
 html,
 body {
-  
+
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -45,3 +45,6 @@ input:-webkit-autofill:active {
 
 
 @import "cssReset";
+@import "./scss/base";
+@import "./scss/layout";
+@import "./scss/font";

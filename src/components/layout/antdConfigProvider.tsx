@@ -18,7 +18,7 @@ const AntdConfigProvider = ({children}: PropsWithChildren) => {
         ...defaultSeed,
         colorPrimary: '#216502',
         colorError: '#F90507',
-        fontFamily: 'danaFaRegular'
+        fontFamily: 'danaFaRegular',
     }
     ConfigProvider.defaultProps = {
         theme: {

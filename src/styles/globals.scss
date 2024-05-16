@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  font-family: 'danaFaRegular', 'dana', serif;
+}
+
+p, h3 {
+  margin: 0;
+  color: #5C5C5C;
+}
+
+:root {
+  --height: 100vh;
+  --colorBgContainer: #fff;
+  --colorCardContentTitle: #fff;
+  --colorCardContentText: #fff;
+}
+
+html,
+body {
+  
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: auto;
+  min-width: 300px;
+  font-family: 'danaFaRegular', 'dana', serif;
+}
+
+body {
+  height: var(--height);
+}
+
+::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #fff inset !important;
+}
+
+
+@import "cssReset";

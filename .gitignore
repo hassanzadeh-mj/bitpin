@@ -1,5 +1,31 @@
-# Object file
-*.o
+# پوشه‌های موقت
+node_modules/
+dist/
+build/
+.cache/
 
-# Ada Library Information
-*.ali
+# فایل‌های پیکربندی
+.env
+.eslintrc
+.prettierrc
+
+# فایل‌های لاگ
+npm-debug.log
+yarn-error.log
+lerna-log.log
+
+# پوشه‌های IDE
+.idea/
+.vscode/
+
+# فایل‌های تست
+coverage/
+jest/
+
+# فایل‌های باینری
+*.log
+*.tmp
+*.swp
+
+# فایل‌های IDE
+*.DS_Store
